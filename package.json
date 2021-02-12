@@ -8,7 +8,9 @@
   },
   "author": "Alexsey",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^6.4.11"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -31,7 +33,6 @@
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
-    "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",

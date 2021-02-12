@@ -16,13 +16,11 @@ const uglify = require('gulp-uglify-es').default
 const imagemin = require('gulp-imagemin')
 const webp = require('gulp-webp')
 const webpHTML = require('gulp-webp-html')
-const webpCss = require('gulp-webp-css')
 const ghPages = require('gulp-gh-pages')
-const path = require('path')
 
 // =============================== Html ===============================
 const html = () => {
-  return src(['./src/index.html'])
+  return src(['./src/*.html'])
     .pipe(
       fileinclude({
         prefix: '@',
@@ -54,7 +52,6 @@ const styles = () => {
         cascade: false,
       })
     )
-    .pipe(webpCss())
     .pipe(
       cleanCSS({
         level: 2,
