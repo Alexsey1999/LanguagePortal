@@ -1,1217 +1,1 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Black.woff"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Black.woff2"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Bold.woff"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Bold.woff2"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-ExtraBold.woff"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-ExtraBold.woff2"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Medium.woff"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Medium.woff2"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Regular.woff"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-Regular.woff2"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-SemiBold.woff"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="fonts/Montserrat-SemiBold.woff2"
-      crossorigin="anonymous"
-    />
-
-    <title>Language Portal</title>
-
-    <style>
-      @charset "UTF-8";
-      *,
-      ::after,
-      ::before {
-        box-sizing: border-box;
-      }
-      ol[class],
-      ul[class] {
-        padding: 0;
-        list-style: none;
-      }
-      blockquote,
-      body,
-      dd,
-      dl,
-      figcaption,
-      figure,
-      h1,
-      h2,
-      h3,
-      h4,
-      li,
-      ol[class],
-      p,
-      ul[class] {
-        margin: 0;
-      }
-      body {
-        min-height: 100vh;
-        scroll-behavior: smooth;
-        text-rendering: optimizeSpeed;
-        line-height: 1.5;
-      }
-      a:not([class]) {
-        -webkit-text-decoration-skip: ink;
-        text-decoration-skip-ink: auto;
-      }
-      a {
-        text-decoration: none;
-      }
-      img {
-        max-width: 100%;
-        display: block;
-        height: auto;
-      }
-      article > * + * {
-        margin-top: 1em;
-      }
-      button,
-      input,
-      select,
-      textarea {
-        font: inherit;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          -webkit-animation-duration: 0s !important;
-          animation-duration: 0s !important;
-          -webkit-animation-iteration-count: 1 !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0s !important;
-          scroll-behavior: auto !important;
-        }
-      }
-      @font-face {
-        font-family: Montserrat;
-        src: url(fonts/Montserrat-Regular.woff2) format('woff2'),
-          url(Montserrat-Regular.woff) format('woff');
-        font-weight: 400;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: Montserrat;
-        src: url(fonts/Montserrat-Medium.woff2) format('woff2'),
-          url(Montserrat-Medium.woff) format('woff');
-        font-weight: 500;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: Montserrat;
-        src: url(fonts/Montserrat-SemiBold.woff2) format('woff2'),
-          url(Montserrat-SemiBold.woff) format('woff');
-        font-weight: 600;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: Montserrat;
-        src: url(fonts/Montserrat-Bold.woff2) format('woff2'),
-          url(Montserrat-Bold.woff) format('woff');
-        font-weight: 700;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: Montserrat;
-        src: url(fonts/Montserrat-ExtraBold.woff2) format('woff2'),
-          url(Montserrat-ExtraBold.woff) format('woff');
-        font-weight: 800;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: Montserrat;
-        src: url(fonts/Montserrat-Black.woff2) format('woff2'),
-          url(Montserrat-Black.woff) format('woff');
-        font-weight: 900;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: swiper-icons;
-        src: url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA')
-          format('woff');
-        font-weight: 400;
-        font-style: normal;
-      }
-      :root {
-        --swiper-theme-color: #007aff;
-      }
-      .swiper-container {
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        overflow: hidden;
-        list-style: none;
-        padding: 0;
-        z-index: 1;
-      }
-      .swiper-container-vertical > .swiper-wrapper {
-        flex-direction: column;
-      }
-      .swiper-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        display: flex;
-        transition-property: transform;
-        box-sizing: content-box;
-      }
-      .swiper-container-android .swiper-slide,
-      .swiper-wrapper {
-        transform: translate3d(0, 0, 0);
-      }
-      .swiper-container-multirow > .swiper-wrapper {
-        flex-wrap: wrap;
-      }
-      .swiper-container-multirow-column > .swiper-wrapper {
-        flex-wrap: wrap;
-        flex-direction: column;
-      }
-      .swiper-container-free-mode > .swiper-wrapper {
-        transition-timing-function: ease-out;
-        margin: 0 auto;
-      }
-      .swiper-container-pointer-events {
-        touch-action: pan-y;
-      }
-      .swiper-container-pointer-events.swiper-container-vertical {
-        touch-action: pan-x;
-      }
-      .swiper-slide {
-        flex-shrink: 0;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transition-property: transform;
-      }
-      .swiper-slide-invisible-blank {
-        visibility: hidden;
-      }
-      .swiper-container-autoheight,
-      .swiper-container-autoheight .swiper-slide {
-        height: auto;
-      }
-      .swiper-container-autoheight .swiper-wrapper {
-        align-items: flex-start;
-        transition-property: transform, height;
-      }
-      .swiper-container-3d {
-        perspective: 1200px;
-      }
-      .swiper-container-3d .swiper-cube-shadow,
-      .swiper-container-3d .swiper-slide,
-      .swiper-container-3d .swiper-slide-shadow-bottom,
-      .swiper-container-3d .swiper-slide-shadow-left,
-      .swiper-container-3d .swiper-slide-shadow-right,
-      .swiper-container-3d .swiper-slide-shadow-top,
-      .swiper-container-3d .swiper-wrapper {
-        transform-style: preserve-3d;
-      }
-      .swiper-container-3d .swiper-slide-shadow-bottom,
-      .swiper-container-3d .swiper-slide-shadow-left,
-      .swiper-container-3d .swiper-slide-shadow-right,
-      .swiper-container-3d .swiper-slide-shadow-top {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 10;
-      }
-      .swiper-container-3d .swiper-slide-shadow-left {
-        background-image: linear-gradient(
-          to left,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0)
-        );
-      }
-      .swiper-container-3d .swiper-slide-shadow-right {
-        background-image: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0)
-        );
-      }
-      .swiper-container-3d .swiper-slide-shadow-top {
-        background-image: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0)
-        );
-      }
-      .swiper-container-3d .swiper-slide-shadow-bottom {
-        background-image: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0)
-        );
-      }
-      .swiper-container-css-mode > .swiper-wrapper {
-        overflow: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-      .swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar {
-        display: none;
-      }
-      .swiper-container-css-mode > .swiper-wrapper > .swiper-slide {
-        scroll-snap-align: start start;
-      }
-      .swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
-        -ms-scroll-snap-type: x mandatory;
-        scroll-snap-type: x mandatory;
-      }
-      .swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
-        -ms-scroll-snap-type: y mandatory;
-        scroll-snap-type: y mandatory;
-      }
-      body {
-        font-family: Montserrat;
-        font-size: 16px;
-        color: #fff;
-      }
-      .container {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 15px;
-      }
-      .header {
-        margin-bottom: 100px;
-      }
-      @media (max-width: 495px) {
-        .header {
-          margin-bottom: 40px;
-        }
-      }
-      .header__logo {
-        display: block;
-        background: #fff;
-        border-radius: 15px;
-        padding: 12px 15px;
-        margin-top: -12px;
-      }
-      @media (max-width: 1250px) {
-        .header__logo {
-          display: inline-block;
-          margin-bottom: 15px;
-        }
-      }
-      @media (max-width: 1028px) {
-        .header__logo {
-          margin: -12px auto 20px;
-        }
-      }
-      .header__btn {
-        text-align: center;
-        border-radius: 40px;
-        border: 2px solid #fff;
-        width: 223px;
-        height: 45px;
-        font-weight: 900;
-        font-size: 15px;
-        line-height: 18px;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.2s;
-        margin: 0 5px;
-      }
-      .header__btn:hover {
-        background: rgba(238, 234, 234, 0.1);
-      }
-      .header-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      @media (max-width: 1250px) {
-        .header-content {
-          flex-wrap: wrap;
-        }
-        .header-btns {
-          width: 70%;
-        }
-      }
-      @media (max-width: 1028px) {
-        .header__btn {
-          margin-bottom: 10px;
-        }
-        .header-btns {
-          width: 100%;
-          margin-bottom: 20px;
-        }
-      }
-      .main {
-        background: url(img/overlay.jpg) center/cover no-repeat;
-        min-height: 100vh;
-        padding-bottom: 50px;
-      }
-      .register {
-        position: absolute;
-        bottom: -30px;
-        left: 10px;
-        text-align: center;
-        font-weight: 500;
-        font-size: 15px;
-      }
-      .register a {
-        text-decoration: underline;
-        color: #fff;
-      }
-      .login-btn a {
-        transition: 0.2s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 219px;
-        color: #000;
-        font-weight: 700;
-        font-size: 16px;
-        height: 45px;
-        background: #fff;
-        border-radius: 40px;
-      }
-      .login-btn a:hover {
-        background: #f1eded;
-      }
-      .language-picker {
-        display: flex;
-        align-items: center;
-      }
-      @media (max-width: 1030px) {
-        .language-picker {
-          width: 8%;
-        }
-      }
-      @media (max-width: 495px) {
-        .register {
-          position: relative;
-          bottom: auto;
-          left: auto;
-        }
-        .login-btn a {
-          margin: 0 auto 5px;
-        }
-        .language-picker {
-          order: 4;
-          margin: 10px auto 0;
-          width: 45px;
-          height: 45px;
-        }
-        .login {
-          width: 100%;
-          text-align: center;
-        }
-      }
-      .login {
-        position: relative;
-      }
-      @media (max-width: 1250px) {
-        .login {
-          margin-left: auto;
-        }
-      }
-      .btns-list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      @media (max-width: 728px) {
-        .btns-list {
-          justify-content: center;
-        }
-      }
-      .main-content {
-        max-width: 700px;
-      }
-      .main-content__title {
-        font-weight: 900;
-        font-size: 40px;
-        line-height: 49px;
-        color: #fff;
-        margin-bottom: 25px;
-      }
-      @media (max-width: 495px) {
-        .main-content {
-          text-align: center;
-        }
-        .main-content__title {
-          line-height: 43px;
-        }
-      }
-      @media (max-width: 365px) {
-        .main-content__title {
-          font-size: 36px;
-        }
-      }
-      .main-content__text {
-        color: #fff;
-        margin-bottom: 25px;
-      }
-      .main-content__input {
-        position: relative;
-        max-width: 470px;
-      }
-      .main-content__search input {
-        height: 50px;
-        padding: 0 62px 0 10px;
-        outline: 0;
-        width: 100%;
-        border: none;
-        border-radius: 4px 8px 8px 4px;
-      }
-      .main-content .choose-language-class {
-        position: absolute;
-        right: -3px;
-        top: 0;
-        bottom: 0;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #a11d59;
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-      }
-      .main-content .choose-language-class .search-icon {
-        width: 25px;
-        height: 25px;
-      }
-      .text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 25px;
-      }
-      .select-hidden {
-        display: none;
-        visibility: hidden;
-        padding-right: 10px;
-      }
-      .select {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        font-weight: 900;
-        font-size: 15px;
-        color: #fff;
-        width: 45px;
-        height: 45px;
-        border: 2px solid #fff;
-        border-radius: 4px;
-      }
-      .select-styled {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.2s;
-      }
-      .select-styled:hover {
-        background: rgba(238, 234, 234, 0.1);
-      }
-      .select-styled.active,
-      .select-styled:active {
-        background-color: rgba(238, 234, 234, 0.1);
-      }
-      .select-options {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        z-index: 999;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        background-color: #4b4a4a;
-      }
-      .select-options li {
-        text-align: center;
-        margin: 0;
-        padding: 12px 0;
-      }
-      .select-options li:hover {
-        background: rgba(238, 234, 234, 0.1);
-      }
-      .select-options li[rel='hide'] {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <section class="main">
-      <header class="header">
-        <div class="container">
-          <div class="header-content">
-            <a href="/" class="header__logo">
-              <picture
-                ><source srcset="img/logo.webp" type="image/webp" />
-                <img width="207" height="79" src="img/logo.png" alt=""
-              /></picture>
-            </a>
-
-            <nav class="header-btns">
-              <ul class="btns-list">
-                <li><a class="header__btn" href="/">Каталог курсов</a></li>
-                <li>
-                  <a class="header__btn" href="/">Преподаватели</a>
-                </li>
-                <li><a class="header__btn" href="/">Мои курсы</a></li>
-              </ul>
-            </nav>
-
-            <div class="language-picker">
-              <select id="language">
-                <option value="en">EN</option>
-                <option value="ru">RU</option>
-              </select>
-            </div>
-
-            <div class="login">
-              <div class="login-btn">
-                <a href="/">Войти</a>
-              </div>
-
-              <div class="register">
-                или
-                <a href="/">зарегистрироваться</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div class="container">
-        <div class="main-content">
-          <h2 class="main-content__title">
-            Приветствуем Вас на портале иностранных языков
-          </h2>
-          <p class="main-content__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-            accumsan et viverra justo commodo. Proin sodales pulvinar sic
-            tempor. Sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra
-            vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc
-            accuan eget.
-          </p>
-
-          <div class="main-content__search">
-            <div class="main-content__input">
-              <label class="choose-language-class" for="choose-language">
-                <svg class="search-icon">
-                  <use xlink:href="img/sprite.svg#searching"></use>
-                </svg>
-              </label>
-              <input
-                id="choose-language"
-                type="text"
-                placeholder="Выберите язык"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="teachers">
-      <div class="container">
-        <div class="header-text teachers-header">
-          <div class="title teachers__title">Более 10 000 преподавателей</div>
-          <p class="text teachers__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-            accumsan et viverra justo commodo. Proin sodales pulvinar sic
-            tempor. Sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra
-            vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc
-            accuan eget.
-          </p>
-        </div>
-        <div class="teachers-slider swiper-container">
-          <div class="swiper-wrapper">
-            <div class="teachers-slide swiper-slide">
-              <div class="teachers-slide__photo">
-                <picture
-                  ><source srcset="img/teacher1.webp" type="image/webp" />
-                  <img width="410" height="262" src="img/teacher1.jpg" alt=""
-                /></picture>
-              </div>
-              <div class="teachers-slide__language">English</div>
-              <div class="teachers-slide__quantity">Преподаватели: 189</div>
-              <picture
-                ><source srcset="img/country1.webp" type="image/webp" />
-                <img src="img/country1.png" class="country-flag" alt=""
-              /></picture>
-            </div>
-            <div class="teachers-slide swiper-slide">
-              <div class="teachers-slide__photo">
-                <picture
-                  ><source srcset="img/teacher2.webp" type="image/webp" />
-                  <img width="410" height="262" src="img/teacher2.jpg" alt=""
-                /></picture>
-              </div>
-              <div class="teachers-slide__language">Espanol</div>
-              <div class="teachers-slide__quantity">Преподаватели: 189</div>
-              <picture
-                ><source srcset="img/country2.webp" type="image/webp" />
-                <img src="img/country2.png" class="country-flag" alt=""
-              /></picture>
-            </div>
-            <div class="teachers-slide swiper-slide">
-              <div class="teachers-slide__photo">
-                <picture
-                  ><source srcset="img/teacher3.webp" type="image/webp" />
-                  <img width="410" height="262" src="img/teacher3.jpg" alt=""
-                /></picture>
-              </div>
-              <div class="teachers-slide__language">Français</div>
-              <div class="teachers-slide__quantity">Преподаватели: 189</div>
-              <picture
-                ><source srcset="img/country3.webp" type="image/webp" />
-                <img src="img/country3.png" class="country-flag" alt=""
-              /></picture>
-            </div>
-            <div class="teachers-slide swiper-slide">
-              <div class="teachers-slide__photo">
-                <picture
-                  ><source srcset="img/teacher1.webp" type="image/webp" />
-                  <img width="410" height="262" src="img/teacher1.jpg" alt=""
-                /></picture>
-              </div>
-              <div class="teachers-slide__language">English</div>
-              <div class="teachers-slide__quantity">Преподаватели: 189</div>
-              <picture
-                ><source srcset="img/country1.webp" type="image/webp" />
-                <img src="img/country1.png" class="country-flag" alt=""
-              /></picture>
-            </div>
-            <div class="teachers-slide swiper-slide">
-              <div class="teachers-slide__photo">
-                <picture
-                  ><source srcset="img/teacher2.webp" type="image/webp" />
-                  <img width="410" height="262" src="img/teacher2.jpg" alt=""
-                /></picture>
-              </div>
-              <div class="teachers-slide__language">Espanol</div>
-              <div class="teachers-slide__quantity">Преподаватели: 189</div>
-              <picture
-                ><source srcset="img/country2.webp" type="image/webp" />
-                <img src="img/country2.png" class="country-flag" alt=""
-              /></picture>
-            </div>
-            <div class="teachers-slide swiper-slide">
-              <div class="teachers-slide__photo">
-                <picture
-                  ><source srcset="img/teacher3.webp" type="image/webp" />
-                  <img width="410" height="262" src="img/teacher3.jpg" alt=""
-                /></picture>
-              </div>
-              <div class="teachers-slide__language">Français</div>
-              <div class="teachers-slide__quantity">Преподаватели: 189</div>
-              <picture
-                ><source srcset="img/country3.webp" type="image/webp" />
-                <img src="img/country3.png" class="country-flag" alt=""
-              /></picture>
-            </div>
-          </div>
-
-          <div class="teachers-slider-pagination swiper-pagination"></div>
-        </div>
-
-        <a href="" class="check-level">Проверить свой уровень</a>
-
-        <picture
-          ><source srcset="img/ask.webp" type="image/webp" />
-          <img class="ask-img" src="img/ask.png" alt=""
-        /></picture>
-      </div>
-    </section>
-
-    <section class="how-it-works">
-      <div class="container">
-        <div class="title">Как это работает</div>
-
-        <div class="steps-row">
-          <div class="step">
-            <div class="step__number">1</div>
-            <div class="step__title">Выбери лучшего преподавателя</div>
-            <div class="text step__description">
-              Посмотри профайлы преподавателей, прочти про их опыт, навыки и
-              знания, а затем выбери лучшего по цене или рейтингу
-            </div>
-          </div>
-          <div class="step">
-            <div class="step__number">2</div>
-            <div class="step__title">Забронируй урок</div>
-            <div class="text step__description">
-              Выбери удобное для тебя время обучения согласно твоему часовому
-              поясу
-            </div>
-          </div>
-          <div class="step">
-            <div class="step__number">3</div>
-            <div class="step__title">Начни обучение!</div>
-            <div class="text step__description">
-              Свяжись с преподователем в назначенное время и начни
-              индивидуальное обучение
-            </div>
-          </div>
-        </div>
-
-        <div class="video-preview">
-          <picture
-            ><source srcset="img/video-preview.webp" type="image/webp" />
-            <img width="952" height="541" src="img/video-preview.jpg" alt=""
-          /></picture>
-        </div>
-      </div>
-    </section>
-
-    <section class="participants">
-      <div class="container">
-        <div class="participants-header">
-          <div class="title participants__title">Более 10 000 учеников</div>
-          <p class="text participants__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-            accumsan et viverra justo commodo. Proin sodales pulvinar sic
-            tempor. Sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra
-            vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc
-            accuan eget.
-          </p>
-        </div>
-
-        <div class="participants-slider swiper-container">
-          <div class="swiper-wrapper">
-            <div class="participants-slide swiper-slide">
-              <div class="participants-slide__header">
-                <div class="participants-slider__images">
-                  <div class="circle-icon">
-                    <picture
-                      ><source srcset="img/teacher1.webp" type="image/webp" />
-                      <img src="img/teacher1.jpg" alt=""
-                    /></picture>
-                  </div>
-                  <picture
-                    ><source srcset="img/country1.webp" type="image/webp" />
-                    <img class="country-flag" src="img/country1.png" alt=""
-                  /></picture>
-                </div>
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века.
-                </p>
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне.
-                </p>
-              </div>
-
-              <div class="participants-slide__footer">
-                <div class="participants-slide__name">Виктор</div>
-                <div class="participants-slide__whatlearns">
-                  Изучает Английский
-                </div>
-              </div>
-            </div>
-            <div class="participants-slide swiper-slide">
-              <div class="participants-slide__header">
-                <div class="participants-slider__images">
-                  <div class="circle-icon">
-                    <picture
-                      ><source srcset="img/teacher2.webp" type="image/webp" />
-                      <img src="img/teacher2.jpg" alt=""
-                    /></picture>
-                  </div>
-
-                  <picture
-                    ><source srcset="img/country2.webp" type="image/webp" />
-                    <img class="country-flag" src="img/country2.png" alt=""
-                  /></picture>
-                </div>
-
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века.
-                </p>
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне.
-                </p>
-              </div>
-
-              <div class="participants-slide__footer">
-                <div class="participants-slide__name">Виктор</div>
-                <div class="participants-slide__whatlearns">
-                  Изучает Английский
-                </div>
-              </div>
-            </div>
-            <div class="participants-slide swiper-slide">
-              <div class="participants-slide__header">
-                <div class="participants-slider__images">
-                  <div class="circle-icon">
-                    <picture
-                      ><source srcset="img/teacher3.webp" type="image/webp" />
-                      <img src="img/teacher3.jpg" alt=""
-                    /></picture>
-                  </div>
-
-                  <picture
-                    ><source srcset="img/country3.webp" type="image/webp" />
-                    <img class="country-flag" src="img/country3.png" alt=""
-                  /></picture>
-                </div>
-
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века.
-                </p>
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне.
-                </p>
-              </div>
-
-              <div class="participants-slide__footer">
-                <div class="participants-slide__name">Виктор</div>
-                <div class="participants-slide__whatlearns">
-                  Изучает Английский
-                </div>
-              </div>
-            </div>
-            <div class="participants-slide swiper-slide">
-              <div class="participants-slide__header">
-                <div class="participants-slider__images">
-                  <div class="circle-icon">
-                    <picture
-                      ><source srcset="img/teacher1.webp" type="image/webp" />
-                      <img src="img/teacher1.jpg" alt=""
-                    /></picture>
-                  </div>
-
-                  <picture
-                    ><source srcset="img/country1.webp" type="image/webp" />
-                    <img class="country-flag" src="img/country1.png" alt=""
-                  /></picture>
-                </div>
-
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века.
-                </p>
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне.
-                </p>
-              </div>
-
-              <div class="participants-slide__footer">
-                <div class="participants-slide__name">Виктор</div>
-                <div class="participants-slide__whatlearns">
-                  Изучает Английский
-                </div>
-              </div>
-            </div>
-            <div class="participants-slide swiper-slide">
-              <div class="participants-slide__header">
-                <div class="participants-slider__images">
-                  <div class="circle-icon">
-                    <picture
-                      ><source srcset="img/teacher2.webp" type="image/webp" />
-                      <img src="img/teacher2.jpg" alt=""
-                    /></picture>
-                  </div>
-
-                  <picture
-                    ><source srcset="img/country2.webp" type="image/webp" />
-                    <img class="country-flag" src="img/country2.png" alt=""
-                  /></picture>
-                </div>
-
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века.
-                </p>
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне.
-                </p>
-              </div>
-
-              <div class="participants-slide__footer">
-                <div class="participants-slide__name">Виктор</div>
-                <div class="participants-slide__whatlearns">
-                  Изучает Английский
-                </div>
-              </div>
-            </div>
-            <div class="participants-slide swiper-slide">
-              <div class="participants-slide__header">
-                <div class="participants-slider__images">
-                  <div class="circle-icon">
-                    <picture
-                      ><source srcset="img/teacher3.webp" type="image/webp" />
-                      <img src="img/teacher3.jpg" alt=""
-                    /></picture>
-                  </div>
-
-                  <picture
-                    ><source srcset="img/country3.webp" type="image/webp" />
-                    <img class="country-flag" src="img/country3.png" alt=""
-                  /></picture>
-                </div>
-
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века.
-                </p>
-                <p class="text participants-slider__text">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне.
-                </p>
-              </div>
-
-              <div class="participants-slide__footer">
-                <div class="participants-slide__name">Виктор</div>
-                <div class="participants-slide__whatlearns">
-                  Изучает Английский
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="participants-pagination swiper-pagination"></div>
-      </div>
-    </section>
-
-    <section class="why-us">
-      <div class="container">
-        <div class="title why-us__title">Почему LinGlobo?</div>
-
-        <div class="why-us-row">
-          <div class="why-us-card">
-            <div class="why-us-card__img">
-              <picture
-                ><source srcset="img/advantage1.webp" type="image/webp" />
-                <img width="256" height="220" src="img/advantage1.jpg" alt=""
-              /></picture>
-            </div>
-
-            <div class="why-us-card__title">Персональное обучения</div>
-            <div class="why-us-card__text">
-              Преподаватель составит индивидуальную программу в соостветствии с
-              твоими целями, хобби, профессией и т.д.
-            </div>
-          </div>
-          <div class="why-us-card">
-            <div class="why-us-card__img">
-              <picture
-                ><source srcset="img/advantage2.webp" type="image/webp" />
-                <img width="256" height="220" src="img/advantage2.jpg" alt=""
-              /></picture>
-            </div>
-
-            <div class="why-us-card__title">В любом месте и в любое время</div>
-            <div class="why-us-card__text">
-              Занимайся из дома или офиса, в собственом ритме в удобное для тебя
-              время
-            </div>
-          </div>
-          <div class="why-us-card">
-            <div class="why-us-card__img">
-              <picture
-                ><source srcset="img/advantage3.webp" type="image/webp" />
-                <img width="256" height="220" src="img/advantage3.jpg" alt=""
-              /></picture>
-            </div>
-
-            <div class="why-us-card__title">
-              Доступные цены и система оплаты
-            </div>
-            <div class="why-us-card__text">
-              На LinGlobo ты найдешь преподавателя на любой бюджет и можешь
-              платить за каждый урок отдельно
-            </div>
-          </div>
-          <div class="why-us-card">
-            <div class="why-us-card__img">
-              <picture
-                ><source srcset="img/advantage4.webp" type="image/webp" />
-                <img width="256" height="220" src="img/advantage4.jpg" alt=""
-              /></picture>
-            </div>
-
-            <div class="why-us-card__title">
-              Опытные проверенные преподаватели
-            </div>
-            <div class="why-us-card__text">
-              Занимайтесь с носителями языка и профессиональными
-              преподавателями. Мы проверяем профиль каждого репетитора на
-              платформе
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="define-level">
-      <div class="container">
-        <div class="define-level-row">
-          <div class="define-level-left-block">
-            <div class="title define-level__title">
-              Определить уровень языка
-            </div>
-
-            <div class="text define-level__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-              accumsan et viverra justo commodo. Proin sodales pulvinar sic
-              tempor.
-            </div>
-
-            <a href="" class="check-level define-level__check-level"
-              >Проверить свой уровень</a
-            >
-          </div>
-
-          <div class="define-level-right-block">
-            <picture
-              ><source srcset="img/level.webp" type="image/webp" />
-              <img width="670" height="455" src="img/level.png" alt=""
-            /></picture>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-row">
-          <div class="footer-logo">
-            <h3>Logo</h3>
-            <span>Портал Курсов Иностранных Языков</span>
-          </div>
-          <div class="footer-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-            accumsan et viverra justo commodo. Proin sodales pulvinar sic
-            tempor.
-          </div>
-
-          <ul class="footer-links">
-            <li><a href="">Каталог курсов</a></li>
-            <li><a href="">Преподаватели</a></li>
-            <li><a href="">Мои курсы</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        Портал Курсов Иностранных Языков © 2020. Все права защищены
-      </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-
-    <script>
-      function loadScript(url) {
-        let link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-
-        document.body.appendChild(link)
-      }
-
-      loadScript('css/main.min.css')
-    </script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="ru">  <head>    <meta charset="UTF-8" />    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Black.woff"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Black.woff2"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Bold.woff"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Bold.woff2"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-ExtraBold.woff"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-ExtraBold.woff2"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Medium.woff"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Medium.woff2"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Regular.woff"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-Regular.woff2"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-SemiBold.woff"      crossorigin="anonymous"    />    <link      rel="preload"      as="font"      href="fonts/Montserrat-SemiBold.woff2"      crossorigin="anonymous"    />    <title>Language Portal</title>    <link rel="stylesheet" href="css/critical.min.css" />  </head>  <body>    <section class="main">      <header class="header">  <div class="container">    <div class="header-content">      <a href="/" class="header__logo">        <picture><source srcset="img/logo.webp" type="image/webp"><img width="207" height="79" src="img/logo.png" alt="" /></picture>      </a>      <nav class="header-btns">        <ul class="btns-list">          <li><a class="header__btn" href="/">Каталог курсов</a></li>          <li>            <a class="header__btn" href="/">Преподаватели</a>          </li>          <li><a class="header__btn" href="/">Мои курсы</a></li>        </ul>      </nav>      <div class="language-picker">        <select id="language">          <option value="en">EN</option>          <option value="ru">RU</option>        </select>      </div>      <div class="login">        <div class="login-btn">          <a href="/">Войти</a>        </div>        <div class="register">          или          <a href="/">зарегистрироваться</a>        </div>      </div>    </div>  </div></header>      <div class="container">        <div class="main-content">          <h2 class="main-content__title">            Приветствуем Вас на портале иностранных языков          </h2>          <p class="main-content__text">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean            euismod bibendum laoreet. Proin gravida dolor sit amet lacus            accumsan et viverra justo commodo. Proin sodales pulvinar sic            tempor. Sociis natoque penatibus et magnis dis parturient montes,            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra            vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc            accuan eget.          </p>          <div class="main-content__search">            <div class="main-content__input">              <label class="choose-language-class" for="choose-language">                <svg class="search-icon">                  <use xlink:href="img/sprite.svg#searching"></use>                </svg>              </label>              <input                id="choose-language"                type="text"                placeholder="Выберите язык"              />            </div>          </div>        </div>      </div>    </section>    <section class="teachers">      <div class="container">        <div class="header-text teachers-header">          <div class="title teachers__title">Более 10 000 преподавателей</div>          <p class="text teachers__text">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean            euismod bibendum laoreet. Proin gravida dolor sit amet lacus            accumsan et viverra justo commodo. Proin sodales pulvinar sic            tempor. Sociis natoque penatibus et magnis dis parturient montes,            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra            vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc            accuan eget.          </p>        </div>        <div class="teachers-slider swiper-container">          <div class="swiper-wrapper">            <div class="teachers-slide swiper-slide">              <div class="teachers-slide__photo">                <picture><source srcset="img/teacher1.webp" type="image/webp"><img width="410" height="262" src="img/teacher1.jpg" alt="" /></picture>              </div>              <div class="teachers-slide__language">English</div>              <div class="teachers-slide__quantity">Преподаватели: 189</div>              <picture><source srcset="img/country1.webp" type="image/webp"><img src="img/country1.png" class="country-flag" alt="" /></picture>            </div>            <div class="teachers-slide swiper-slide">              <div class="teachers-slide__photo">                <picture><source srcset="img/teacher2.webp" type="image/webp"><img width="410" height="262" src="img/teacher2.jpg" alt="" /></picture>              </div>              <div class="teachers-slide__language">Espanol</div>              <div class="teachers-slide__quantity">Преподаватели: 189</div>              <picture><source srcset="img/country2.webp" type="image/webp"><img src="img/country2.png" class="country-flag" alt="" /></picture>            </div>            <div class="teachers-slide swiper-slide">              <div class="teachers-slide__photo">                <picture><source srcset="img/teacher3.webp" type="image/webp"><img width="410" height="262" src="img/teacher3.jpg" alt="" /></picture>              </div>              <div class="teachers-slide__language">Français</div>              <div class="teachers-slide__quantity">Преподаватели: 189</div>              <picture><source srcset="img/country3.webp" type="image/webp"><img src="img/country3.png" class="country-flag" alt="" /></picture>            </div>            <div class="teachers-slide swiper-slide">              <div class="teachers-slide__photo">                <picture><source srcset="img/teacher1.webp" type="image/webp"><img width="410" height="262" src="img/teacher1.jpg" alt="" /></picture>              </div>              <div class="teachers-slide__language">English</div>              <div class="teachers-slide__quantity">Преподаватели: 189</div>              <picture><source srcset="img/country1.webp" type="image/webp"><img src="img/country1.png" class="country-flag" alt="" /></picture>            </div>            <div class="teachers-slide swiper-slide">              <div class="teachers-slide__photo">                <picture><source srcset="img/teacher2.webp" type="image/webp"><img width="410" height="262" src="img/teacher2.jpg" alt="" /></picture>              </div>              <div class="teachers-slide__language">Espanol</div>              <div class="teachers-slide__quantity">Преподаватели: 189</div>              <picture><source srcset="img/country2.webp" type="image/webp"><img src="img/country2.png" class="country-flag" alt="" /></picture>            </div>            <div class="teachers-slide swiper-slide">              <div class="teachers-slide__photo">                <picture><source srcset="img/teacher3.webp" type="image/webp"><img width="410" height="262" src="img/teacher3.jpg" alt="" /></picture>              </div>              <div class="teachers-slide__language">Français</div>              <div class="teachers-slide__quantity">Преподаватели: 189</div>              <picture><source srcset="img/country3.webp" type="image/webp"><img src="img/country3.png" class="country-flag" alt="" /></picture>            </div>          </div>          <div class="teachers-slider-pagination swiper-pagination"></div>        </div>        <a href="" class="check-level">Проверить свой уровень</a>        <picture><source srcset="img/ask.webp" type="image/webp"><img class="ask-img" src="img/ask.png" alt="" /></picture>      </div>    </section>    <section class="how-it-works">      <div class="container">        <div class="title">Как это работает</div>        <div class="steps-row">          <div class="step">            <div class="step__number">1</div>            <div class="step__title">Выбери лучшего преподавателя</div>            <div class="text step__description">              Посмотри профайлы преподавателей, прочти про их опыт, навыки и              знания, а затем выбери лучшего по цене или рейтингу            </div>          </div>          <div class="step">            <div class="step__number">2</div>            <div class="step__title">Забронируй урок</div>            <div class="text step__description">              Выбери удобное для тебя время обучения согласно твоему часовому              поясу            </div>          </div>          <div class="step">            <div class="step__number">3</div>            <div class="step__title">Начни обучение!</div>            <div class="text step__description">              Свяжись с преподователем в назначенное время и начни              индивидуальное обучение            </div>          </div>        </div>        <div class="video-preview">          <picture><source srcset="img/video-preview.webp" type="image/webp"><img width="952" height="541" src="img/video-preview.jpg" alt="" /></picture>        </div>      </div>    </section>    <section class="participants">      <div class="container">        <div class="participants-header">          <div class="title participants__title">Более 10 000 учеников</div>          <p class="text participants__text">            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean            euismod bibendum laoreet. Proin gravida dolor sit amet lacus            accumsan et viverra justo commodo. Proin sodales pulvinar sic            tempor. Sociis natoque penatibus et magnis dis parturient montes,            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra            vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc            accuan eget.          </p>        </div>        <div class="participants-slider swiper-container">          <div class="swiper-wrapper">            <div class="participants-slide swiper-slide">              <div class="participants-slide__header">                <div class="participants-slider__images">                  <div class="circle-icon">                    <picture><source srcset="img/teacher1.webp" type="image/webp"><img src="img/teacher1.jpg" alt="" /></picture>                  </div>                  <picture><source srcset="img/country1.webp" type="image/webp"><img class="country-flag" src="img/country1.png" alt="" /></picture>                </div>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для                  текстов на латинице с начала XVI века.                </p>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне.                </p>              </div>              <div class="participants-slide__footer">                <div class="participants-slide__name">Виктор</div>                <div class="participants-slide__whatlearns">                  Изучает Английский                </div>              </div>            </div>            <div class="participants-slide swiper-slide">              <div class="participants-slide__header">                <div class="participants-slider__images">                  <div class="circle-icon">                    <picture><source srcset="img/teacher2.webp" type="image/webp"><img src="img/teacher2.jpg" alt="" /></picture>                  </div>                  <picture><source srcset="img/country2.webp" type="image/webp"><img class="country-flag" src="img/country2.png" alt="" /></picture>                </div>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для                  текстов на латинице с начала XVI века.                </p>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне.                </p>              </div>              <div class="participants-slide__footer">                <div class="participants-slide__name">Виктор</div>                <div class="participants-slide__whatlearns">                  Изучает Английский                </div>              </div>            </div>            <div class="participants-slide swiper-slide">              <div class="participants-slide__header">                <div class="participants-slider__images">                  <div class="circle-icon">                    <picture><source srcset="img/teacher3.webp" type="image/webp"><img src="img/teacher3.jpg" alt="" /></picture>                  </div>                  <picture><source srcset="img/country3.webp" type="image/webp"><img class="country-flag" src="img/country3.png" alt="" /></picture>                </div>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для                  текстов на латинице с начала XVI века.                </p>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне.                </p>              </div>              <div class="participants-slide__footer">                <div class="participants-slide__name">Виктор</div>                <div class="participants-slide__whatlearns">                  Изучает Английский                </div>              </div>            </div>            <div class="participants-slide swiper-slide">              <div class="participants-slide__header">                <div class="participants-slider__images">                  <div class="circle-icon">                    <picture><source srcset="img/teacher1.webp" type="image/webp"><img src="img/teacher1.jpg" alt="" /></picture>                  </div>                  <picture><source srcset="img/country1.webp" type="image/webp"><img class="country-flag" src="img/country1.png" alt="" /></picture>                </div>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для                  текстов на латинице с начала XVI века.                </p>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне.                </p>              </div>              <div class="participants-slide__footer">                <div class="participants-slide__name">Виктор</div>                <div class="participants-slide__whatlearns">                  Изучает Английский                </div>              </div>            </div>            <div class="participants-slide swiper-slide">              <div class="participants-slide__header">                <div class="participants-slider__images">                  <div class="circle-icon">                    <picture><source srcset="img/teacher2.webp" type="image/webp"><img src="img/teacher2.jpg" alt="" /></picture>                  </div>                  <picture><source srcset="img/country2.webp" type="image/webp"><img class="country-flag" src="img/country2.png" alt="" /></picture>                </div>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для                  текстов на латинице с начала XVI века.                </p>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне.                </p>              </div>              <div class="participants-slide__footer">                <div class="participants-slide__name">Виктор</div>                <div class="participants-slide__whatlearns">                  Изучает Английский                </div>              </div>            </div>            <div class="participants-slide swiper-slide">              <div class="participants-slide__header">                <div class="participants-slider__images">                  <div class="circle-icon">                    <picture><source srcset="img/teacher3.webp" type="image/webp"><img src="img/teacher3.jpg" alt="" /></picture>                  </div>                  <picture><source srcset="img/country3.webp" type="image/webp"><img class="country-flag" src="img/country3.png" alt="" /></picture>                </div>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для                  текстов на латинице с начала XVI века.                </p>                <p class="text participants-slider__text">                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и                  вэб-дизайне.                </p>              </div>              <div class="participants-slide__footer">                <div class="participants-slide__name">Виктор</div>                <div class="participants-slide__whatlearns">                  Изучает Английский                </div>              </div>            </div>          </div>        </div>        <div class="participants-pagination swiper-pagination"></div>      </div>    </section>    <section class="why-us">      <div class="container">        <div class="title why-us__title">Почему LinGlobo?</div>        <div class="why-us-row">          <div class="why-us-card">            <div class="why-us-card__img">              <picture><source srcset="img/advantage1.webp" type="image/webp"><img width="256" height="220" src="img/advantage1.jpg" alt="" /></picture>            </div>            <div class="why-us-card__title">Персональное обучения</div>            <div class="why-us-card__text">              Преподаватель составит индивидуальную программу в соостветствии с              твоими целями, хобби, профессией и т.д.            </div>          </div>          <div class="why-us-card">            <div class="why-us-card__img">              <picture><source srcset="img/advantage2.webp" type="image/webp"><img width="256" height="220" src="img/advantage2.jpg" alt="" /></picture>            </div>            <div class="why-us-card__title">В любом месте и в любое время</div>            <div class="why-us-card__text">              Занимайся из дома или офиса, в собственом ритме в удобное для тебя              время            </div>          </div>          <div class="why-us-card">            <div class="why-us-card__img">              <picture><source srcset="img/advantage3.webp" type="image/webp"><img width="256" height="220" src="img/advantage3.jpg" alt="" /></picture>            </div>            <div class="why-us-card__title">              Доступные цены и система оплаты            </div>            <div class="why-us-card__text">              На LinGlobo ты найдешь преподавателя на любой бюджет и можешь              платить за каждый урок отдельно            </div>          </div>          <div class="why-us-card">            <div class="why-us-card__img">              <picture><source srcset="img/advantage4.webp" type="image/webp"><img width="256" height="220" src="img/advantage4.jpg" alt="" /></picture>            </div>            <div class="why-us-card__title">              Опытные проверенные преподаватели            </div>            <div class="why-us-card__text">              Занимайтесь с носителями языка и профессиональными              преподавателями. Мы проверяем профиль каждого репетитора на              платформе            </div>          </div>        </div>      </div>    </section>    <section class="define-level">      <div class="container">        <div class="define-level-row">          <div class="define-level-left-block">            <div class="title define-level__title">              Определить уровень языка            </div>            <div class="text define-level__text">              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean              euismod bibendum laoreet. Proin gravida dolor sit amet lacus              accumsan et viverra justo commodo. Proin sodales pulvinar sic              tempor.            </div>            <a href="" class="check-level define-level__check-level"              >Проверить свой уровень</a            >          </div>          <div class="define-level-right-block">            <picture><source srcset="img/level.webp" type="image/webp"><img width="670" height="455" src="img/level.png" alt="" /></picture>          </div>        </div>      </div>    </section>    <footer class="footer">  <div class="container">    <div class="footer-row">      <div class="footer-logo">        <h3>Logo</h3>        <span>Портал Курсов Иностранных Языков</span>      </div>      <div class="footer-text">        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra        justo commodo. Proin sodales pulvinar sic tempor.      </div>      <ul class="footer-links">        <li><a href="">Каталог курсов</a></li>        <li><a href="">Преподаватели</a></li>        <li><a href="">Мои курсы</a></li>      </ul>    </div>  </div>  <div class="copyright">    Портал Курсов Иностранных Языков © 2020. Все права защищены  </div></footer>    <script src="js/main.js"></script>    <script>      function loadScript(url) {        let link = document.createElement('link')        link.rel = 'stylesheet'        link.href = url        document.body.appendChild(link)      }      loadScript('css/main.min.css')    </script>  </body></html>
