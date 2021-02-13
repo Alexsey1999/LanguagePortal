@@ -17,6 +17,8 @@ const imagemin = require('gulp-imagemin')
 const webp = require('gulp-webp')
 const webpHTML = require('gulp-webp-html')
 const ghPages = require('gulp-gh-pages')
+const replace = require('gulp-replace')
+const fs = require('fs')
 
 // =============================== Html ===============================
 const html = () => {
@@ -218,6 +220,24 @@ const optimizeImages = () => {
 }
 // =============================== Build ===============================
 
+// =============================== Inline Css ===============================
+
+// const inlineCssFiles = () => {
+//   return src('./app/index.html')
+//     .pipe(
+//       replace(
+//         /<link rel="stylesheet" href="css\/critical.min.css" \/>/,
+//         function (s) {
+//           const style = fs.readFileSync('./app/css/critical.min.css', 'utf8')
+//           return '<style>\n' + style + '\n</style>'
+//         }
+//       )
+//     )
+//     .pipe(dest('./app'))
+// }
+
+// =============================== Inline Css ===============================
+
 // =============================== Watch ===============================
 const watchFiles = () => {
   browserSync.init({
@@ -243,12 +263,14 @@ const clean = () => {
 exports.styles = styles
 exports.watchFiles = watchFiles
 exports.fileinclude = html
+// exports.inlineCssFiles = inlineCssFiles
+exports.stylesBuild = stylesBuild
 
 // =============================== gulp ===============================
 exports.default = series(
   clean,
-  parallel(html, scripts, fonts, resources, imgToApp, svgSprites),
   styles,
+  parallel(html, scripts, fonts, resources, imgToApp, svgSprites),
   watchFiles
 )
 // =============================== gulp ===============================
@@ -258,6 +280,7 @@ exports.build = series(
   clean,
   parallel(html, scriptsBuild, fonts, resources, imgToApp, svgSprites),
   stylesBuild,
+  // inlineCssFiles,
   optimizeImages
 )
 // =============================== gulp build ===============================
