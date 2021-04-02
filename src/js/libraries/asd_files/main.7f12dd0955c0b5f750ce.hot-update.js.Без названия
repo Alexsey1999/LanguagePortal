@@ -1,0 +1,489 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/Сomponents/Widgets/Reviews/ModalReview.jsx":
+/*!********************************************************!*\
+  !*** ./src/Сomponents/Widgets/Reviews/ModalReview.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @vkontakte/vkui */ "./node_modules/@vkontakte/vkui/dist/es6/index.js");
+/* harmony import */ var _vkontakte_icons_dist_28_camera__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @vkontakte/icons/dist/28/camera */ "./node_modules/@vkontakte/icons/dist/28/camera.js");
+/* harmony import */ var _vkontakte_icons_dist_28_camera__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_vkontakte_icons_dist_28_camera__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _includes_ApiVk__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../includes/ApiVk */ "./src/includes/ApiVk.ts");
+/* harmony import */ var _includes_Services_WidgetService__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../includes/Services/WidgetService */ "./src/includes/Services/WidgetService.ts");
+/* harmony import */ var _includes_Helpers_Helpers__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../includes/Helpers/Helpers */ "./src/includes/Helpers/Helpers.ts");
+/* harmony import */ var _includes_Constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../includes/Constants */ "./src/includes/Constants.ts");
+
+
+
+var _jsxFileName = "C:\\Users\\Alexsey\\Desktop\\vkapp\\src\\\u0421omponents\\Widgets\\Reviews\\ModalReview.jsx";
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  var api = _includes_ApiVk__WEBPACK_IMPORTED_MODULE_6__["default"].getInstance();
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(''),
+      _useState2 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      url = _useState2[0],
+      setUrl = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState4 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
+      statusUrl = _useState4[0],
+      setStatusUrl = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(''),
+      _useState6 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState5, 2),
+      inputBottom_url = _useState6[0],
+      setInputBottomUrl = _useState6[1];
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(''),
+      _useState8 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState7, 2),
+      title = _useState8[0],
+      setTitle = _useState8[1];
+
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState10 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState9, 2),
+      statusTitle = _useState10[0],
+      setStatusTitle = _useState10[1];
+
+  var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])("\u0412\u0432\u0435\u0434\u0435\u043D\u043E 0 \u0438\u0437 100 \u0441\u0438\u043C\u0432."),
+      _useState12 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState11, 2),
+      inputBottom_title = _useState12[0],
+      setInputBottom_title = _useState12[1];
+
+  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(''),
+      _useState14 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState13, 2),
+      feedback = _useState14[0],
+      setFeedback = _useState14[1];
+
+  var _useState15 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])("\u0412\u0432\u0435\u0434\u0435\u043D\u043E 0 \u0438\u0437 300 \u0441\u0438\u043C\u0432."),
+      _useState16 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState15, 2),
+      inputBottom_text = _useState16[0],
+      setInputBottom_text = _useState16[1];
+
+  var _useState17 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState18 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState17, 2),
+      statusFeedBack = _useState18[0],
+      setStatusFeedBack = _useState18[1];
+
+  var _useState19 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(null),
+      _useState20 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState19, 2),
+      img = _useState20[0],
+      setImg = _useState20[1];
+
+  var _useState21 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(''),
+      _useState22 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState21, 2),
+      inputBottom_img = _useState22[0],
+      setInputBottom_img = _useState22[1];
+
+  var _useState23 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState24 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState23, 2),
+      statusImg = _useState24[0],
+      setStatusImg = _useState24[1];
+
+  var _useState25 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(props.type == 'url' ? true : false),
+      _useState26 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState25, 2),
+      inputSwitchLink = _useState26[0],
+      setInputSwitchLink = _useState26[1];
+
+  var _useState27 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState28 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState27, 2),
+      isLoad = _useState28[0],
+      setisLoad = _useState28[1];
+
+  var SaveModal = function SaveModal() {
+    if (title.trim() === '') {
+      setStatusTitle(true);
+      setInputBottom_title('Введите имя');
+    }
+
+    if (feedback.trim() === '') {
+      setStatusFeedBack(true);
+      setInputBottom_text('Введите текст отзыва');
+    }
+
+    if (!!img === false) {
+      setStatusImg(true);
+      setInputBottom_img('Выберите фото');
+    }
+
+    if (title.trim() !== '' && feedback.trim() !== '' && !!img) {
+      props.onSelect({
+        type: props.cardID === undefined ? 'add' : 'update',
+        payload: [props.cardID, {
+          title: title,
+          feedback: feedback,
+          icon_id: img.icon_id,
+          img: img.img
+        }]
+      });
+      props.close({
+        id: null,
+        args: {}
+      });
+    }
+  };
+  /**
+   * Side effect на получение публичного токена VK при загрузке
+   */
+
+
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
+    if (props.cardID !== undefined) update_feedback(props.state.rows[props.cardID]);
+  }, []);
+
+  var update_feedback = function update_feedback(item) {
+    setTitle(item.title);
+    setInputBottom_title("\u0412\u0432\u0435\u0434\u0435\u043D\u043E ".concat(Object(_includes_Helpers_Helpers__WEBPACK_IMPORTED_MODULE_8__["countStringLength"])(item.title), " \u0438\u0437 100 \u0441\u0438\u043C\u0432."));
+    setFeedback(item.descr);
+    setInputBottom_text("\u0412\u0432\u0435\u0434\u0435\u043D\u043E ".concat(Object(_includes_Helpers_Helpers__WEBPACK_IMPORTED_MODULE_8__["countStringLength"])(item.descr), " \u0438\u0437 300 \u0441\u0438\u043C\u0432."));
+    setImg({
+      icon_id: item.icon_id,
+      img: item.img
+    });
+  };
+
+  var getImg =
+  /*#__PURE__*/
+  function () {
+    var _ref = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+    /*#__PURE__*/
+    C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
+      var response;
+      return C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (e.target.files[0]) {
+                _context.next = 2;
+                break;
+              }
+
+              return _context.abrupt("return", false);
+
+            case 2:
+              setisLoad(true);
+              _context.next = 5;
+              return _includes_Services_WidgetService__WEBPACK_IMPORTED_MODULE_7__["default"].uploadImage({
+                image: e.target.files[0],
+                image_type: '50x50'
+              });
+
+            case 5:
+              response = _context.sent;
+
+              if (!(response.result === 'error')) {
+                _context.next = 11;
+                break;
+              }
+
+              setStatusImg(true);
+              setInputBottom_img(response.errors[0]);
+              setisLoad(false);
+              return _context.abrupt("return", false);
+
+            case 11:
+              setisLoad(false);
+              setStatusImg(false);
+              setInputBottom_img('');
+              setImg({
+                icon_id: response.response.id,
+                img: response.response.images[0].url
+              });
+
+            case 15:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function getImg(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  var getFeedBack =
+  /*#__PURE__*/
+  function () {
+    var _ref2 = Object(C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+    /*#__PURE__*/
+    C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+      var response;
+      return C_Users_Alexsey_Desktop_vkapp_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              if (!(url.indexOf('vk.com') < 0)) {
+                _context2.next = 4;
+                break;
+              }
+
+              setStatusUrl(true);
+              setInputBottomUrl('Введите внутреннюю ссылку vk.com');
+              return _context2.abrupt("return");
+
+            case 4:
+              setisLoad(true);
+              _context2.next = 7;
+              return api.getComment(url);
+
+            case 7:
+              response = _context2.sent;
+
+              if (response.result === 'success') {
+                props.onSelect({
+                  type: 'add_url',
+                  payload: {
+                    title: response.name,
+                    feedback: Object(_includes_Helpers_Helpers__WEBPACK_IMPORTED_MODULE_8__["cropStringForVk"])(response.text, 300),
+                    img: response.img.url,
+                    icon_id: response.icon_id,
+                    button_url: url
+                  }
+                });
+                setisLoad(false);
+                props.close({
+                  id: null,
+                  args: {}
+                });
+              } else {
+                setisLoad(false);
+                setStatusUrl(true);
+                setInputBottomUrl(response.message);
+              }
+
+            case 9:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function getFeedBack() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var imgLoad = function imgLoad() {
+    if (img == null) {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+        style: {
+          marginRight: 10
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Avatar"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_icons_dist_28_camera__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 138
+        },
+        __self: this
+      })));
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      style: {
+        marginRight: 10
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 141
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Avatar"], {
+      src: img.img,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 141
+      },
+      __self: this
+    }));
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, props.type === 'all' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Cell"], {
+    asideContent: react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Switch"], {
+      disabled: props.type == 'all' ? false : true,
+      checked: inputSwitchLink,
+      onChange: function onChange() {
+        setInputSwitchLink(inputSwitchLink ? false : true);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 146
+      },
+      __self: this
+    }),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: this
+  }, "\u0421\u0441\u044B\u043B\u043A\u0430 \u043D\u0430 \u043E\u0442\u0437\u044B\u0432"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Separator"], {
+    style: {
+      opacity: '.12'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 152
+    },
+    __self: this
+  }), inputSwitchLink && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["FormLayout"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 153
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Input"], {
+    name: "link",
+    type: "text",
+    value: url,
+    status: statusUrl ? 'error' : null,
+    bottom: statusUrl ? inputBottom_url : '*cсылка должна быть на отзыв из обсуждения или комментарий к посту.',
+    maxLength: "100",
+    onChange: function onChange(e) {
+      setUrl(e.target.value);
+      setStatusUrl(false);
+    },
+    placeholder: "\u0421\u0441\u044B\u043B\u043A\u0430 vk.com",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+    disabled: isLoad,
+    mode: "secondary",
+    size: "xl",
+    stretched: true,
+    onClick: getFeedBack,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 167
+    },
+    __self: this
+  }, isLoad ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
+    size: "regular",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 173
+    },
+    __self: this
+  }) : 'Загрузить')), !inputSwitchLink && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["FormLayout"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Input"], {
+    name: "title",
+    type: "text",
+    top: "\u0418\u043C\u044F",
+    value: title,
+    status: statusTitle ? 'error' : null,
+    bottom: inputBottom_title ? inputBottom_title : '_',
+    maxLength: "100",
+    onChange: function onChange(e) {
+      var value = e.target.value;
+      var stringLength = Object(_includes_Helpers_Helpers__WEBPACK_IMPORTED_MODULE_8__["countStringLength"])(value);
+
+      if (stringLength <= _includes_Constants__WEBPACK_IMPORTED_MODULE_9__["MAX_STRING_LENGTH"]) {
+        setInputBottom_title('Введено ' + stringLength + ' из ' + _includes_Constants__WEBPACK_IMPORTED_MODULE_9__["MAX_STRING_LENGTH"] + ' симв.');
+        setTitle(e.target.value);
+        setStatusTitle(false);
+      }
+    },
+    placeholder: "\u041A\u0442\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u043B \u043E\u0442\u0437\u044B\u0432?",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Textarea"], {
+    name: "text",
+    type: "text",
+    top: "\u0422\u0435\u043A\u0441\u0442",
+    value: feedback,
+    status: statusFeedBack ? 'error' : null,
+    bottom: inputBottom_text ? inputBottom_text : '_',
+    maxLength: "300",
+    onChange: function onChange(e) {
+      var value = e.target.value;
+      var stringLength = Object(_includes_Helpers_Helpers__WEBPACK_IMPORTED_MODULE_8__["countStringLength"])(value);
+
+      if (stringLength <= 300) {
+        setInputBottom_text('Введено ' + stringLength + ' из ' + 300 + ' симв.');
+        setFeedback(e.target.value);
+        setStatusFeedBack(false);
+      }
+    },
+    placeholder: "\u0422\u0435\u043A\u0441\u0442 \u043E\u0442\u0437\u044B\u0432\u0430",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 196
+    },
+    __self: this
+  }), isLoad ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
+    size: "medium",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 218
+    },
+    __self: this
+  }) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["File"], {
+    style: {
+      padding: '0px'
+    },
+    onChange: getImg,
+    before: imgLoad(),
+    status: statusImg ? 'error' : null,
+    bottom: inputBottom_img,
+    mode: "tertiary",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 219
+    },
+    __self: this
+  }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0444\u043E\u0442\u043E"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_vkontakte_vkui__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+    mode: "secondary",
+    size: "xl",
+    stretched: true,
+    onClick: SaveModal,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 227
+    },
+    __self: this
+  }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C")));
+});
+
+/***/ })
+
+})
+//# sourceMappingURL=main.7f12dd0955c0b5f750ce.hot-update.js.map

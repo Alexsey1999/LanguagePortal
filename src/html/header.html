@@ -2,7 +2,16 @@
   <div class="container">
     <div class="header-content">
       <a href="/" class="header__logo">
-        <img width="207" height="79" src="img/logo.png" alt="" />
+        <picture>
+          <source srcset="img/logo.webp" type="image/webp" />
+          <img
+            src="img/logo.png"
+            width="207"
+            height="79"
+            loading="lazy"
+            alt="logo"
+          />
+        </picture>
       </a>
 
       <nav class="header-btns">
