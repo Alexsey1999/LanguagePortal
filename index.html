@@ -78,59 +78,74 @@
     <body>
         <section class="main">
             <header class="header">
-  <div class="container">
-    <div class="header-content">
-      <a href="/" class="header__logo">
-        <picture>
-          <source srcset="img/logo.webp" type="image/webp" />
-          <img
-            src="img/logo.png"
-            width="207"
-            height="79"
-            loading="lazy"
-            alt="logo"
-          />
-        </picture>
-      </a>
+                <div class="container">
+                    <div class="header-content">
+                        <a href="/" class="header__logo">
+                            <picture>
+                                <source
+                                    srcset="img/logo.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="img/logo.png"
+                                    width="207"
+                                    height="79"
+                                    loading="lazy"
+                                    alt="logo"
+                                />
+                            </picture>
+                        </a>
 
-      <nav class="header-btns">
-        <ul class="btns-list">
-          <li><a class="header__btn" href="/">Каталог курсов</a></li>
-          <li>
-            <a class="header__btn" href="/">Преподаватели</a>
-          </li>
-          <li><a class="header__btn" href="/">Мои курсы</a></li>
-        </ul>
-      </nav>
+                        <nav class="header-btns">
+                            <ul class="btns-list">
+                                <li>
+                                    <a class="header__btn" href="/"
+                                        >Каталог курсов</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="header__btn" href="/"
+                                        >Преподаватели</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="header__btn" href="/"
+                                        >Мои курсы</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
 
-      <div class="language-picker">
-        <select id="language">
-          <option value="en">EN</option>
-          <option value="ru">RU</option>
-        </select>
-      </div>
+                        <div class="language-picker">
+                            <select id="language">
+                                <option value="en">EN</option>
+                                <option value="ru">RU</option>
+                            </select>
+                        </div>
 
-      <div class="login">
-        <div class="login-btn">
-          <a href="/">Войти</a>
-        </div>
+                        <div class="login">
+                            <div class="login-btn">
+                                <a href="/">Войти</a>
+                            </div>
 
-        <div class="register">
-          или
-          <a href="/">зарегистрироваться</a>
-        </div>
+                            <div class="register">
+                                или
+                                <a href="/">зарегистрироваться</a>
+                            </div>
 
-        <div class="mail">
-            <a href="mailto:shishkinalexsey42@gmail.com">Напиши на почту</a>
-        </div>
+                            <div class="mail">
+                                <a href="mailto:shishkinalexsey42@gmail.com"
+                                    >Напиши на почту</a
+                                >
+                            </div>
 
-        <div class="tel">
-            <a href="tel:79097182204">Позвони</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+                            <div class="tel">
+                                <a href="tel:79097182204">Позвони</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
             <div class="container">
                 <div class="main-content">
@@ -160,11 +175,14 @@
                                     ></use>
                                 </svg>
                             </label>
-                            <input
-                                id="choose-language"
-                                type="text"
-                                placeholder="Выберите язык"
-                            />
+                            <form action="">
+                                <input
+                                    id="choose-language"
+                                    type="text"
+                                    placeholder="Выберите язык"
+                                />
+                                <button type="submit">Отправить форму</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -983,29 +1001,30 @@
             </div>
         </section>
         <footer class="footer">
-  <div class="container">
-    <div class="footer-row">
-      <div class="footer-logo">
-        <h3>Logo</h3>
-        <span>Портал Курсов Иностранных Языков</span>
-      </div>
-      <div class="footer-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
-        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
-        justo commodo. Proin sodales pulvinar sic tempor.
-      </div>
+            <div class="container">
+                <div class="footer-row">
+                    <div class="footer-logo">
+                        <h3>Logo</h3>
+                        <span>Портал Курсов Иностранных Языков</span>
+                    </div>
+                    <div class="footer-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean euismod bibendum laoreet. Proin gravida dolor sit
+                        amet lacus accumsan et viverra justo commodo. Proin
+                        sodales pulvinar sic tempor.
+                    </div>
 
-      <ul class="footer-links">
-        <li><a href="">Каталог курсов</a></li>
-        <li><a href="">Преподаватели</a></li>
-        <li><a href="">Мои курсы</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="copyright">
-    Портал Курсов Иностранных Языков © 2020. Все права защищены
-  </div>
-</footer>
+                    <ul class="footer-links">
+                        <li><a href="">Каталог курсов</a></li>
+                        <li><a href="">Преподаватели</a></li>
+                        <li><a href="">Мои курсы</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                Портал Курсов Иностранных Языков © 2020. Все права защищены
+            </div>
+        </footer>
 
         <script src="js/main.js"></script>
 
